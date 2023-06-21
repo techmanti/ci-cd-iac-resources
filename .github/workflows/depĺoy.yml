@@ -18,12 +18,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18
-           
-      - name: List files in the current directory
-        run: ls -l
-      
-      - name: Print current working directory
-        run: pwd
       
       - name: Install dependencies
         run: npm install
@@ -40,4 +34,4 @@ jobs:
 
       - name: copying files to S3
         run: |
-            aws s3 sync dist/ s3://techman.sh --delete
+            aws s3 sync dist/techman-landing-page/browser/ s3://techman.sh --delete
