@@ -1,0 +1,47 @@
+<div class="content">
+  <mat-toolbar class="navbar" [ngClass]="{'navbar-fixed': isScrolled}">
+    <app-navbar fxShow="true" fxHide.lt-md="true"></app-navbar>
+    <div fxShow="true" fxHide.gt-sm="true" class="responsive-navbar">
+      <img class="icon-navbar" src="assets/images/logo.png" />
+      <a
+        class="menu-toolbar"
+        (click)="$event.stopPropagation(); toggleSidenav()"
+        ><mat-icon>menu</mat-icon></a
+      >
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav class="sidebar-navbar" #sidenav mode="side"  >
+      <div class="sidebar-navbar-links">
+        <a (click)="closeSidenav('home')">Home</a>
+        <a (click)="closeSidenav('services')">Serviços</a>
+        <a (click)="closeSidenav('resources')">Recursos</a>
+        <a (click)="closeSidenav('about')">Sobre nós</a>
+        <a (click)="closeSidenav('home')">Blog</a>
+        <a (click)="closeSidenav('support')">Contato</a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <section id="home">
+        <app-home></app-home>
+      </section>
+      <section id="services">
+        <app-services> </app-services>
+      </section>
+      <section id="info">
+        <app-info></app-info>
+      </section>
+      <section id="resources">
+        <app-resources></app-resources>
+      </section>
+      <section id="about">
+        <app-about></app-about>
+      </section>
+      <section id="support">
+        <app-forms></app-forms>
+      </section>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer></app-footer>
+</div>

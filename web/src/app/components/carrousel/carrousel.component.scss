@@ -1,0 +1,80 @@
+@import "@angular/flex-layout/mq";
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include layout-bp(lt-md) {
+    position: relative;
+  }
+
+  &__button {
+    color: #fff;
+    cursor: pointer;
+    transition: 020ms ease-in-out;
+
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+
+    &:hover {
+      color: #fafafabe;
+    }
+    mat-icon {
+      font-size: 8rem;
+      width: 90px;
+      height: auto;
+
+      @include layout-bp(lt-md) {
+        font-size: 5rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .left {
+    @include layout-bp(lt-md) {
+      position: absolute;
+      left: -60px;
+    }
+
+  }
+
+  .right {
+    @include layout-bp(lt-md) {
+      position: absolute;
+      right: -60px;
+    }
+  }
+}
+
+.slide {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin: 0 1rem;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+
+  transition: transform 0.9s ease-in-out;
+
+  @include layout-bp(lt-md) {
+    width: 240px !important;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+
+    @include layout-bp(lt-md) {
+      width: 240px !important;
+    }
+  }
+}

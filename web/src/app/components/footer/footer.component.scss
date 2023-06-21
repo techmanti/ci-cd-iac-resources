@@ -1,0 +1,29 @@
+.footer {
+  background-color: #311f73 !important;
+
+  .footer-toolbar {
+    display: flex;
+
+    background-color: #311f73 !important;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 1rem;
+    color: #7ae55c;
+  }
+}
+
+.footer-toolbar .fa-instagram {
+  color: #7ae55c;
+}
+
+.footer-toolbar .fa-linkedin {
+  color: #7ae55c;
+}
+
+.footer-toolbar .fa-youtube {
+  color: #7ae55c;
+}
+
+.footer-toolbar .fa-twitter {
+  color: #7ae55c;
+}
