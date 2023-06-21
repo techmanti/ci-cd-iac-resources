@@ -1,0 +1,94 @@
+@import "@angular/flex-layout/mq";
+
+.service-content {
+  margin: 6rem 0;
+
+  .title-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    span {
+      font-size: 2rem;
+      color: #311f73;
+      font-weight: 600;
+      font-family: "Anuphan", sans-serif;
+      text-align: center;
+      width: 85%;
+    }
+  }
+
+  .card-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @include layout-bp(lt-md) {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .card {
+      width: 30%;
+
+      @include layout-bp(lt-md) {
+        width: 100%;
+        }
+
+      .card-title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        font-family: "Anuphan", sans-serif;
+        color: #7ae55c;
+        margin-bottom: 0.5rem;
+      }
+      .card-description {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Anuphan", sans-serif;
+        gap: 1rem;
+
+        &__title {
+          text-align: center;
+          color: #666;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        &__text {
+          color: #666;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .actions-service{
+    &__content{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 6rem;
+    }
+
+    &__button{
+      border-radius: 10px;
+      color: #fff;
+      background-color: #7AE55C;
+      padding: 1.5rem;
+      transition: 0.2s all;
+
+      &:hover{
+        background-color: #62c048;
+      }
+    }
+  }
+}

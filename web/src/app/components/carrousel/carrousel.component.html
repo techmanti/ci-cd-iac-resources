@@ -1,0 +1,17 @@
+<div class="carousel">
+  <a class="carousel__button left" (click)="goToPreviousSlide()"
+    ><mat-icon>chevron_left</mat-icon></a
+  >
+  <!-- <div *ngIf="false; else regularCarousel">
+    <div class="slide">{{ slides[currentSlideIndex] }}</div>
+  </div> -->
+  <ng-container *ngFor="let slide of duplicatedSlides; let i = index;">
+    <div class="slide" [style.width]="slideWidth" *ngIf="i >= currentSlideIndex && i < currentSlideIndex + visibleSlides">
+      <img [src]="slide" alt="Slide {{ i + 1 }}" class="carousel-image">
+    </div>
+  </ng-container>
+
+  <a class="carousel__button right" (click)="goToNextSlide()"
+    ><mat-icon>chevron_right</mat-icon></a
+  >
+</div>
