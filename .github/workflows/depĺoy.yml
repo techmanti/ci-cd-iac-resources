@@ -18,7 +18,7 @@ jobs:
           node-version: 18
       
       - name: Change directory to project
-        run: cd web/  
+        run: cd $GITHUB_WORKSPACE/web/ 
       
       - name: Install dependencies
         run: npm install
@@ -35,4 +35,4 @@ jobs:
 
       - name: copying files to S3
         run: |
-            aws s3 sync web/dist/ s3://techman.sh --delete
+            aws s3 sync $GITHUB_WORKSPACE/web/dist/ s3://techman.sh --delete
