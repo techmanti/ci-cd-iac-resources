@@ -40,4 +40,4 @@ jobs:
 
       - name: copying files to S3
         run: |
-            aws s3 sync web/dist/ s3://techman.sh --delete
+            aws s3 sync dist/ s3://techman.sh --delete
