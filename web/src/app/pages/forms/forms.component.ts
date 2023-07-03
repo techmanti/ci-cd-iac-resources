@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormService } from 'src/app/services/formulario.service';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FormsComponent implements OnInit {
   contatoForm: FormGroup = this.formBuilder.group({
@@ -15,7 +17,8 @@ export class FormsComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private formularioService: FormService
+    private formularioService: FormService,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {}
@@ -33,10 +36,16 @@ export class FormsComponent implements OnInit {
       const dadosFormulario = this.contatoForm.value;
       this.formularioService.enviarEmail(dadosFormulario).subscribe({
         next: (response) => {
-          console.log('deu certo');
+          this._snackBar.open('Email enviado com sucesso!', 'Fechar', {
+            duration: 3000,
+            panelClass: ['blue-snackbar']
+          })
         },
         error: (err) => {
-          alert('There was an error in retrieving data from the server');
+          this._snackBar.open('Erro ao enviar o email, por favor reenvie daqui alguns minutos', 'Fechar', {
+            panelClass: ['blue-snackbar']
+
+          })
         },
       });
     }

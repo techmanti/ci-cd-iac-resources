@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -27,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AosDirective } from './directives/AOS.directive';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     CarrouselComponent,
     AboutComponent,
     FormsComponent,
-    FooterComponent
+    FooterComponent,
+    AosDirective
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

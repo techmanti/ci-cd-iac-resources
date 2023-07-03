@@ -7,109 +7,29 @@
       >
     </div>
     <div class="card-list">
-      <div class="card" data-aos="fade-right" data-aos-delay="200">
+      <div
+        class="card"
+        data-aos-delay="200"
+        [attr.data-aos]="card.fade"
+        *ngFor="let card of serviceInfos"
+      >
         <div class="card-title">
-          <mat-icon> display_settings </mat-icon>
-          <span>Operações</span>
+          <mat-icon> {{ card.icon }} </mat-icon>
+          <span>{{ card.title }}</span>
         </div>
         <div class="card-description">
           <span class="card-description__title">
-            Estratégias assertivas que entregam mais rapidamente o resultado
-            desejado pela sua empresa.
+            {{ card.subtitle }}
           </span>
-          <span class="card-description__text"
-            >A Techman acompanha todas as etapas e métricas do processo Dev, Sec
-            e Ops, prevendo falhas operacionais e realizando mudanças frequentes
-            no código, dependendo da necessidade da empresa.
+          <a  class="card-description__expand-button" *ngIf="isMobile()" (click)="toggleMore(card.id)">
+            <mat-icon>    {{ showMore[card.id] ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </a>
+          <span class="card-description__text" *ngIf="!isMobile()"
+            >{{ card.text }}
           </span>
-        </div>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-title">
-          <mat-icon> attach_money </mat-icon>
-          <span>Operações</span>
-        </div>
-        <div class="card-description">
-          <span class="card-description__title">
-            Maximize investimento em tecnologia e reduza os custos de
-            desenvolvimento e entrega de software.
-          </span>
-          <span class="card-description__text"
-            >Automatização, uso da nuvem, monitoramento e análise de custos,
-            escalabilidade, integração e colaboração são práticas que permitem
-            que a sua empresa maximize o valor do investimento em tecnologia e
-            entregue software de alta qualidade a um custo reduzido.
-          </span>
-        </div>
-      </div>
-      <div class="card" data-aos="fade-left" data-aos-delay="200">
-        <div class="card-title">
-          <mat-icon> settings_suggest </mat-icon>
-          <span>Automação</span>
-        </div>
-        <div class="card-description">
-          <span class="card-description__title">
-            Eliminação de tarefas repetitivas dos processos tradicionais.
-            Precisa uma frase aqui também.
-          </span>
-          <span class="card-description__text">
-            Com a implementação do modelo Pipeline CI/CD sua empresa tem análise
-            constante de testes necessários e recuperação mais ágil de falhas.
-          </span>
-        </div>
-      </div>
-      <div class="card" data-aos="fade-right" data-aos-delay="200">
-        <div class="card-title">
-          <mat-icon> analytics </mat-icon>
-          <span>Desempenho</span>
-        </div>
-        <div class="card-description">
-          <span class="card-description__title">
-            Aumento da taxa de sucesso através de métricas de qualidade e
-            eficiência na entrega do software.
-          </span>
-          <span class="card-description__text">
-            Ao medir e monitorar regularmente essas métricas, as equipes de
-            DevOps podem identificar áreas de melhoria e tomar medidas para
-            melhorar o desempenho e a eficiência no desenvolvimento e entrega de
-            software, utilizando o Architecture Servless.
-          </span>
-        </div>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-title">
-          <mat-icon> cloud_upload </mat-icon>
-          <span>Segurança</span>
-        </div>
-        <div class="card-description">
-          <span class="card-description__title">
-            Implementação de toda a segurança necessária para a proteção de
-            dados na nuvem.
-          </span>
-          <span class="card-description__text">
-            Através do DevOps, a Techman automatiza as práticas de segurança,
-            através da proteção de dados na nuvem. Dessa forma, é possível
-            prever e evitar a ocorrência de acidentes, identificar
-            vulnerabilidades e monitorar e proteger dados sensíveis.
-          </span>
-        </div>
-      </div>
-      <div class="card" data-aos="fade-left" data-aos-delay="200">
-        <div class="card-title">
-          <mat-icon> nature </mat-icon>
-          <span>Sustentabilidade</span>
-        </div>
-        <div class="card-description">
-          <span class="card-description__title">
-            O impacto ambiental, social e econômico de todo o ciclo de vida do
-            software é respeitado.
-          </span>
-          <span class="card-description__text">
-            Com DevOps sua empresa pode contribuir para a construção de um mundo
-            mais sustentável e responsável, através da redução no consumo de
-            energia e redução de ruídos, além de obter benefícios em termos de
-            eficiência, custo e reputação.
-          </span>
+          <ng-container *ngIf="showMore[card.id] && isMobile()" >
+            <span data-aos="zoom-in" class="card-description__text">{{ card.text }}</span>
+          </ng-container>
         </div>
       </div>
     </div>
