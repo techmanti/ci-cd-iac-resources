@@ -2,7 +2,7 @@
 
 .service-content {
   margin: 6rem 0;
-
+  position: relative;
   .title-content {
     display: flex;
     justify-content: center;
@@ -25,16 +25,18 @@
     gap: 3rem;
 
     @include layout-bp(lt-md) {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card {
       width: 30%;
+      box-shadow: 0px 3px 6px #e0dafc;
+      border-radius: 15px;
 
       @include layout-bp(lt-md) {
         width: 100%;
-        }
+      }
 
       .card-title {
         display: flex;
@@ -42,12 +44,28 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+        border-radius: 15px 15px 0 0;
 
         font-family: "Anuphan", sans-serif;
         color: #7ae55c;
         margin-bottom: 0.5rem;
+
+        background-color: #2e206f;
+
+        mat-icon{
+          margin: 0.5rem 0px -10px 0px;
+          width: 60px;
+          height: 60px;
+          font-size: 60px;
+        }
+        span{
+          margin-bottom: 1rem;
+          font-size: 1.125rem;
+        }
       }
       .card-description {
+        padding: 1rem;
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -57,36 +75,44 @@
 
         &__title {
           text-align: center;
-          color: #666;
+          color: #2E206F;
           font-size: 1rem;
           font-weight: 700;
         }
 
+        &__expand-button{
+          mat-icon{
+            color: #dadadada;
+          }
+        }
+
         &__text {
           color: #666;
-          font-size: 1rem;
+          font-size: 0.825rem;
           text-align: center;
         }
       }
     }
   }
 
-  .actions-service{
-    &__content{
+  .actions-service {
+    &__content {
       display: flex;
       width: 100%;
       justify-content: center;
       margin-top: 6rem;
+      position: absolute;
+      bottom: -100px;
     }
 
-    &__button{
+    &__button {
       border-radius: 10px;
       color: #fff;
-      background-color: #7AE55C;
+      background-color: #7ae55c;
       padding: 1.5rem;
       transition: 0.2s all;
 
-      &:hover{
+      &:hover {
         background-color: #62c048;
       }
     }
