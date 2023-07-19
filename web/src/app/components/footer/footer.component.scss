@@ -1,10 +1,10 @@
 .footer {
-  background-color: #311f73 !important;
+  background-color: #ffffff !important;
 
   .footer-toolbar {
     display: flex;
 
-    background-color: #311f73 !important;
+    background-color: #ffffff !important;
     justify-content: flex-end;
     width: 100%;
     gap: 1rem;
@@ -13,17 +13,21 @@
 }
 
 .footer-toolbar .fa-instagram {
-  color: #7ae55c;
+  color: #311f73
 }
 
-.footer-toolbar .fa-linkedin {
-  color: #7ae55c;
+.footer-toolbar .fa-linkedin-square {
+  color: #311f73;
 }
 
-.footer-toolbar .fa-youtube {
-  color: #7ae55c;
+.footer-toolbar .fa-youtube-play {
+  color: #311f73;
 }
 
 .footer-toolbar .fa-twitter {
-  color: #7ae55c;
+  color: #311f73;
+}
+
+.footer-toolbar .fa-envelope {
+  color: #311f73;
 }
