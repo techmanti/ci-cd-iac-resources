@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { TranslocoService } from '@ngneat/transloco';
 declare var $: any; // Importe o jQuery, se necessário
 
 @Component({
@@ -9,6 +10,9 @@ declare var $: any; // Importe o jQuery, se necessário
 })
 export class NavbarComponent {
 
+  lang = this. translocoService.getActiveLang();
+  constructor(private translocoService: TranslocoService) {}
+  
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,4 +25,4 @@ export class NavbarComponent {
     }
   }
 
-}
+  }

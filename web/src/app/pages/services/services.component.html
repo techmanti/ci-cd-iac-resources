@@ -2,8 +2,7 @@
   <div class="service-content">
     <div class="title-content">
       <span>
-        Como a Techman utiliza o DevOps para reduzir custos e aumentar a receita
-        da sua empresa.</span
+        {{'service_content_title'| transloco}}</span
       >
     </div>
     <div class="card-list">
@@ -39,8 +38,16 @@
         class="actions-service__button"
         mat-button
       >
-        Quero saber mais!
+        {{'info_button' | transloco}}
       </button>
     </div>
+  </div>
+
+  <div class="language-buttons">
+    <ng-container *ngFor="let language of languages">
+      <button mat-button (click)="changeLanguage(language.value)">
+        <img class="flag-icon" [src]="language.flag" alt="{{ language.alt }}" />
+      </button>
+    </ng-container>
   </div>
 </div>

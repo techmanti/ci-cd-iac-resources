@@ -30,6 +30,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AosDirective } from './directives/AOS.directive';
+import { TranslocoRootModule } from './transloco-root.module';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { TranslationService } from './translation.service';
 
 @NgModule({
   declarations: [
@@ -63,9 +66,11 @@ import { AosDirective } from './directives/AOS.directive';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    TranslocoRootModule,
+    TranslocoModule,
   ],
-  providers: [],
+  providers: [TranslationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
