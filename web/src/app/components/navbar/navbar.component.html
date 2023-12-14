@@ -3,14 +3,15 @@
     <img class="icon-navbar" src="assets/images/logo.png" />
     <div class="navbar-links">
       <a (click)="scrollToSection('home')">Home</a>
-      <a (click)="scrollToSection('services')">Serviços</a>
-      <a (click)="scrollToSection('resources')">Recursos</a>
-      <a  (click)="scrollToSection('about')">Sobre nós</a>
+      <a (click)="scrollToSection('services')"> {{'services_layout' | transloco}} </a>
+      <a (click)="scrollToSection('resources')"> {{'resources_layout' | transloco}} </a>
+      <a (click)="scrollToSection('about')"> {{'aboutus_layout' | transloco}} </a>
       <a href="https://medium.com/@TechmanDevops" target="_blank">Blog</a>
-      <a (click)="scrollToSection('support')" >Contato</a>
+      <a (click)="scrollToSection('support')" >{{'contact_layout' | transloco}}</a>
     </div>
     <div class="navbar-buttons">
-       
+      <div class="navbar-buttons">
+      </div>
     </div>
   </div>
 </nav>

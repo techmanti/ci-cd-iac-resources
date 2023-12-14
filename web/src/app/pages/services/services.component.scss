@@ -118,3 +118,34 @@
     }
   }
 }
+
+.language-buttons {
+  position: fixed;
+  top:30px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.language-buttons button {
+  margin-right: 3px;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+
+.language-buttons img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+}
+
+.flag-icon {
+  display: inline-block;
+  margin-right: 0.1px;
+}
