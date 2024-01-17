@@ -1,5 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
@@ -11,36 +12,40 @@ import { TranslocoService } from '@ngneat/transloco';
 export class ServicesComponent implements OnInit {
   serviceInfos: any = [];
   showMore: { [key: number]: boolean } = {};
-  
+
   languages = [
-    { value: 'pt-BR', flag: 'assets/images/br.png', label: 'Português', alt: 'Portuguese Flag' },
+    { value: 'br', flag: 'assets/images/br.png', label: 'Português', alt: 'Portuguese Flag' },
     { value: 'en', flag: 'assets/images/uk.png', label: 'English', alt: 'English Flag' },
   ];
-  
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private translocoService: TranslocoService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
-  async ngOnInit(): Promise<void> {
-    await this.loadTranslations();
+  ngOnInit(): void {
+    this.translocoService.langChanges$.subscribe(lang => {
+      this.loadTranslations();
+    });
+    this.loadTranslations();
   }
-
-  async loadTranslations(): Promise<void> {
+  
+  async loadTranslations(): Promise<void> {  
     const activeLang = this.translocoService.getActiveLang();
-    const [enTranslation, ptBrTranslation] = await Promise.all([
+      const [enTranslation, ptBrTranslation] = await Promise.all([
       this.translocoService.load('en').toPromise(),
-      this.translocoService.load('pt-BR').toPromise()
+      this.translocoService.load('br').toPromise()
     ]);
-
+  
     this.serviceInfos = ServicesInfo.map(service => ({
       ...service,
       title: this.translocoService.translate(`services.${service.id}.title`),
       subtitle: this.translocoService.translate(`services.${service.id}.subtitle`),
       text: this.translocoService.translate(`services.${service.id}.text`)
     }));
-
-    // Verifica se o idioma ativo foi alterado e recarrega as traduções
+  
     if (activeLang !== this.translocoService.getActiveLang()) {
       await this.loadTranslations();
     }
@@ -48,7 +53,16 @@ export class ServicesComponent implements OnInit {
 
   changeLanguage(language: string): void {
     this.translocoService.setActiveLang(language);
-    this.loadTranslations();
+  
+    if (language === 'br') {
+      this.router.navigate(['/br']);
+    } else if (language === 'en') {
+      this.router.navigate(['/en']);
+    }
+  }
+  
+  reloadPage(): void {
+    location.reload();
   }
 
   toggleMore(cardId: number): void {

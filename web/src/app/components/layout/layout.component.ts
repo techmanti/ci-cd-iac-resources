@@ -20,7 +20,7 @@ export class LayoutComponent {
     this.sidenav.close();
     const element = document.getElementById(secaoId);
     if (element) {
-      const offset = -80; // Define a quantidade de pixels que deseja parar antes da âncora
+      const offset = -80
       const topPos = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: topPos + offset,

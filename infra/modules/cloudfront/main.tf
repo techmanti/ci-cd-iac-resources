@@ -75,9 +75,53 @@ resource "aws_cloudfront_distribution" "website_distribution" {
   enabled             = true
   default_root_object = local.index_document
 
-  origin { # Web
+  origin {
     domain_name = aws_s3_bucket.static_website.bucket_regional_domain_name
     origin_id   = aws_s3_bucket.static_website.id
+
+    s3_origin_config {
+      origin_access_identity = ""
+    }
+  }
+
+  ordered_cache_behavior {
+    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
+    cached_methods         = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id       = aws_s3_bucket.static_website.id
+    min_ttl                = 0
+    default_ttl            = 0
+    max_ttl                = 0 # Disable cache
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+    forwarded_values {
+      query_string = true
+      headers      = ["Origin", "Authorization", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+
+      cookies {
+        forward = "none"
+      }
+    }
+    path_pattern = "br/*"
+  }
+
+  ordered_cache_behavior {
+    allowed_methods        = ["GET", "HEAD", "OPTIONS"]
+    cached_methods         = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id       = aws_s3_bucket.static_website.id
+    min_ttl                = 0
+    default_ttl            = 0
+    max_ttl                = 0 # Disable cache
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+    forwarded_values {
+      query_string = true
+      headers      = ["Origin", "Authorization", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+
+      cookies {
+        forward = "none"
+      }
+    }
+    path_pattern = "en/*"
   }
 
   # Web / FronEnd static website / S3 Bucket
