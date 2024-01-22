@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
-declare var $: any; // Importe o jQuery, se necessário
+declare var $: any;
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +16,7 @@ export class NavbarComponent {
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = -100; // Define a quantidade de pixels que deseja parar antes da âncora
+      const offset = -100;
       const topPos = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
         top: topPos + offset,

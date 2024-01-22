@@ -25,11 +25,10 @@ export class FormsComponent implements OnInit {
 
   enviarFormulario(): void {
     if (this.contatoForm.invalid) {
-      // Percorre os controles do formulário
       Object.keys(this.contatoForm.controls).forEach((key) => {
         const control = this.contatoForm.get(key);
         if (control && control.invalid) {
-          control.markAsTouched(); // Marca o controle como "touched"
+          control.markAsTouched();
         }
       });
     } else {
