@@ -27,31 +27,6 @@ resource "aws_route53_record" "web_record" {
   }
 }
 
-resource "aws_route53_record" "web_br" {
-  zone_id = data.aws_route53_zone.hosted_zone.zone_id
-  name    = "br.techman.sh"
-  type    = "A"
-
-  alias {
-    name                   = var.aws_cloudfront_distribution_domain_name
-    zone_id                = var.aws_cloudfront_distribution_hosted_id
-    evaluate_target_health = true
-  }
-}
-
-resource "aws_route53_record" "web_en" {
-  zone_id = data.aws_route53_zone.hosted_zone.zone_id
-  name    = "en.techman.sh"
-  type    = "A"
-
-  alias {
-    name                   = var.aws_cloudfront_distribution_domain_name
-    zone_id                = var.aws_cloudfront_distribution_hosted_id
-    evaluate_target_health = true
-  }
-}
-
-
 resource "aws_route53_record" "email_record" {
   zone_id = var.route53_zone_id
   name = ""
