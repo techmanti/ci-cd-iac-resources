@@ -1,70 +1,82 @@
 {
-  "about_title":"About Us",
-  "about_content1":"The company's mission and brand aim to propagate the DevOps culture, developing a digital environment focused on security and innovation, following the best-known market practices, conducting tests, and avoiding unnecessary delays and failures.",
-  "about_content2":"The values of Techman aim to bring, to the fullest extent, within the DevOps culture, a balance between personal and professional life, empowerment, and social justice, with the maximum security and protection provided by cloud architecture.",
-  "about_content3":"The vision of Techman seeks to enhance communication among project stakeholders and collaborate with multifunctional teams for more efficient deployment. Customer-focused, it is committed to understanding their needs and goals, aiming to increase productivity and provide customized solutions tailored to the DevExperience.",
-  "home_title":"Benefits in Practice",
-  "description_title1":"Reduce",
-  "description_text1":"Errors and costs in the development of your software projects, IT infrastructure, and much more.",
-  "description_title2":"Increase",
-  "description_text2":"Your company's productivity, ensuring quality and speed in the delivery of your projects.",
-  "description_title3":"Profit",
-  "description_text3":"Productivity and profitability with the implementation of agile DevOps practices.",
-  "home_button":"I want a free assessment!",
-  "info_banner_title":"Agility,",
-  "info_banner_title2":"Security, and Quality",
-  "info_banner_subtitle":"With DevOps, your teams work collaboratively on the same project, ensuring agility, security, and quality.",
-  "title_container1":"Application Monitoring",
-  "title_container1_description1":"SLAs (Service Level Agreements)",
-  "title_container1_description2":"SLIs (Service Level Indicators)",
-  "title_container1_description3":"SLO (Service Level Objectives)",
-  "title_container2":"Change Implementation",
-  "title_container2_description1":"Risk Reduction",
-  "title_container2_description2":"Feedback Cycles",
-  "title_container2_description3":"Performance, Speed, and Efficiency",
-  "title_container3":"Techman Management",
-  "title_container3_description1":"Automation, traces, and logs",
-  "title_container3_description2":"Service level indicators",
-  "title_container3_description3":"Architectural decisions and metrics",
-  "info_button":"Want to know more!",
-  "info_resources_title_text":"The Best",
-  "info_resources_title_subtext":"Technological Resources",
-  "service_content_title":"How Techman Uses DevOps to Reduce Costs and Increase Your Company's Revenue.",
-  "home_layout":"Home",
-  "services_layout":"Services",
-  "resources_layout":"Resources",
-  "aboutus_layout":"About Us",
-  "contact_layout":"Contact",
-  "services":{
-     "1":{
-        "title":"Operations",
-        "subtitle":"Assertive strategies that deliver results faster for your company.",
-        "text":"Techman monitors all stages and metrics of the Dev, Sec, and Ops process, predicting operational failures and making frequent code changes as needed by the company."
-     },
-     "2":{
-        "title":"Cost Optimization",
-        "subtitle":"Maximize investment in technology and reduce development and software delivery costs.",
-        "text":"Automation, cloud usage, cost monitoring and analysis, scalability, integration, and collaboration are practices that allow your company to maximize the value of technology investment and deliver high-quality software at reduced costs."
-     },
-     "3":{
-        "title":"Automation",
-        "subtitle":"Elimination of repetitive tasks from traditional processes. Need a sentence here too.",
-        "text":"With the implementation of the CI/CD Pipeline model, your company has constant analysis of necessary tests and faster recovery from failures."
-     },
-     "4":{
-        "title":"Performance",
-        "subtitle":"Increased success rate through quality metrics and efficiency in software delivery.",
-        "text":"By measuring and monitoring these metrics regularly, DevOps teams can identify areas for improvement and take steps to improve performance and efficiency in software development and delivery, using the Serverless Architecture."
-     },
-     "5":{
-        "title":"Security",
-        "subtitle":"Implementation of all necessary security for data protection in the cloud.",
-        "text":"Through DevOps, Techman automates security practices, through data protection in the cloud. This way, it is possible to predict and prevent accidents, identify vulnerabilities, and monitor and protect sensitive data."
-     },
-     "6":{
-        "title":"Sustainability",
-        "subtitle":"The environmental, social, and economic impact of the entire software lifecycle is respected.",
-        "text":"With DevOps, your company can contribute to building a more sustainable and responsible world, through reduced energy consumption and noise reduction, in addition to obtaining benefits in terms of efficiency, cost, and reputation."
-     }
-  }
+   "about_title":"About Us",
+   "about_content1":"The company's mission and brand aim to propagate the DevOps culture, developing a digital environment focused on security and innovation, following the best-known market practices, conducting tests, and avoiding unnecessary delays and failures.",
+   "about_content2":"The values of Techman aim to bring, to the fullest extent, within the DevOps culture, a balance between personal and professional life, empowerment, and social justice, with the maximum security and protection provided by cloud architecture.",
+   "about_content3":"The vision of Techman seeks to enhance communication among project stakeholders and collaborate with multifunctional teams for more efficient deployment. Customer-focused, it is committed to understanding their needs and goals, aiming to increase productivity and provide customized solutions tailored to the DevExperience.",
+   "home_title":"Benefits in Practice",
+   "description_title1":"Reduce",
+   "description_text1":"Errors and costs in the development of your software projects, IT infrastructure, and much more.",
+   "description_title2":"Increase",
+   "description_text2":"Your company's productivity, ensuring quality and speed in the delivery of your projects.",
+   "description_title3":"Profit",
+   "description_text3":"Productivity and profitability with the implementation of agile DevOps practices.",
+   "home_button":"I want a free assessment!",
+   "info_banner_title":"Agility,",
+   "info_banner_title2":"Security, and Quality",
+   "info_banner_subtitle":"With DevOps, your teams work collaboratively on the same project, ensuring agility, security, and quality.",
+   "title_container1":"Application Monitoring",
+   "title_container1_description1":"SLAs (Service Level Agreements)",
+   "title_container1_description2":"SLIs (Service Level Indicators)",
+   "title_container1_description3":"SLO (Service Level Objectives)",
+   "title_container2":"Change Implementation",
+   "title_container2_description1":"Risk Reduction",
+   "title_container2_description2":"Feedback Cycles",
+   "title_container2_description3":"Performance, Speed, and Efficiency",
+   "title_container3":"Techman Management",
+   "title_container3_description1":"Automation, traces, and logs",
+   "title_container3_description2":"Service level indicators",
+   "title_container3_description3":"Architectural decisions and metrics",
+   "info_button":"Want to know more!",
+   "info_resources_title_text":"The Best",
+   "info_resources_title_subtext":"Technological Resources",
+   "service_content_title":"How Techman Uses DevOps to Reduce Costs and Increase Your Company's Revenue.",
+   "home_layout":"Home",
+   "services_layout":"Services",
+   "resources_layout":"Resources",
+   "aboutus_layout":"About Us",
+   "contact_layout":"Contact",
+   "services":{
+      "1":{
+         "title":"Operations",
+         "subtitle":"Assertive strategies that deliver results faster for your company.",
+         "text":"Techman monitors all stages and metrics of the Dev, Sec, and Ops process, predicting operational failures and making frequent code changes as needed by the company."
+      },
+      "2":{
+         "title":"Cost Optimization",
+         "subtitle":"Maximize investment in technology and reduce development and software delivery costs.",
+         "text":"Automation, cloud usage, cost monitoring and analysis, scalability, integration, and collaboration are practices that allow your company to maximize the value of technology investment and deliver high-quality software at reduced costs."
+      },
+      "3":{
+         "title":"Automation",
+         "subtitle":"Elimination of repetitive tasks from traditional processes. Need a sentence here too.",
+         "text":"With the implementation of the CI/CD Pipeline model, your company has constant analysis of necessary tests and faster recovery from failures."
+      },
+      "4":{
+         "title":"Performance",
+         "subtitle":"Increased success rate through quality metrics and efficiency in software delivery.",
+         "text":"By measuring and monitoring these metrics regularly, DevOps teams can identify areas for improvement and take steps to improve performance and efficiency in software development and delivery, using the Serverless Architecture."
+      },
+      "5":{
+         "title":"Security",
+         "subtitle":"Implementation of all necessary security for data protection in the cloud.",
+         "text":"Through DevOps, Techman automates security practices, through data protection in the cloud. This way, it is possible to predict and prevent accidents, identify vulnerabilities, and monitor and protect sensitive data."
+      },
+      "6":{
+         "title":"Sustainability",
+         "subtitle":"The environmental, social, and economic impact of the entire software lifecycle is respected.",
+         "text":"With DevOps, your company can contribute to building a more sustainable and responsible world, through reduced energy consumption and noise reduction, in addition to obtaining benefits in terms of efficiency, cost, and reputation."
+      }
+   },
+   "forms_tittle":"Leave your details and we'll get in touch shortly!",
+   "forms_name":"Name",
+   "forms_nameplaceholder":"Enter your name",
+   "forms_name1":"Name is required",
+   "forms_emailplaceholder":"Enter the email",
+   "forms_emailinvalid":"Invalid email",
+   "forms_name_company":"Company Name",
+   "forms_companyplaceholder":"Enter the company name",
+   "telefone_tittle":"Telephone",
+   "telefone_placeholder":"Enter the phone number",
+   "telefone_info":"The phone number must have 10 or 11 numerical digits",
+   "telefone_button":"Get in touch!"
 }

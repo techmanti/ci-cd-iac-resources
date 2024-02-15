@@ -11,3 +11,11 @@ variable "record_name" {
 variable "alternative_name" {
   type = string
 }
+
+variable "EMAIL" {
+  type = string
+}
+
+variable "PASSWORD" {
+  type = string
+}

@@ -1,0 +1,66 @@
+<div id="forms" class="forms">
+    <div class="forms__image" fxHide.xs fxShow.sm>
+      <img src="assets/images/foguete.png" />
+    </div>
+    <div class="forms__container container">
+      <div class="forms__title">
+        <span> {{'forms_tittle' | transloco}} </span>
+      </div>
+      <form
+        class="techman-form"
+        [formGroup]="contatoForm"
+        (ngSubmit)="enviarFormulario()"
+      >
+        <mat-form-field class="form-control">
+          <mat-label> {{'forms_name' | transloco}}</mat-label>
+          <input matInput [placeholder]="'forms_nameplaceholder' | transloco" formControlName="nome" />
+          <mat-error
+            *ngIf="
+              contatoForm.controls['nome'].invalid &&
+              (contatoForm.controls['nome'].dirty ||
+                contatoForm.controls['nome'].touched)
+            "
+          >
+          {{'forms_name1' | transloco}}
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="form-control">
+          <mat-label>Email</mat-label>
+          <input matInput [placeholder]="'forms_emailplaceholder' | transloco" formControlName="email" />
+          <mat-error
+            *ngIf="
+              contatoForm.controls['email'].invalid &&
+              (contatoForm.controls['email'].dirty ||
+                contatoForm.controls['email'].touched)
+            "
+          >
+          {{'forms_emailinvalid' | transloco}}
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="form-control">
+          <mat-label> {{'forms_name_company' | transloco}} </mat-label>
+          <input matInput [placeholder]="'forms_companyplaceholder' | transloco"formControlName="nomeEmpresa"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="form-control">
+          <mat-label> {{'telefone_tittle' | transloco}} </mat-label>
+          <input matInput [placeholder]="'telefone_placeholder' | transloco" formControlName="telefone" (input)="formatarTelefone($event)" />
+          <mat-error
+            *ngIf="
+              contatoForm.controls['telefone'].invalid &&
+              (contatoForm.controls['telefone'].dirty ||
+                contatoForm.controls['telefone'].touched)
+            "
+          >
+            {{'telefone_info' | transloco}}
+          </mat-error>
+        </mat-form-field>
+  
+        <button mat-raised-button class="btn"> {{'telefone_button' | transloco}} </button>
+      </form>
+    </div>
+  </div>
+  

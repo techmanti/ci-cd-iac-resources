@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormService } from 'src/app/services/formulario.service';
+import { TranslocoService } from '@ngneat/transloco';
+
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -13,12 +15,14 @@ export class FormsComponent implements OnInit {
     nome: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     nomeEmpresa: [''],
+    telefone: ['', [this.validarTelefone]]
   });
 
   constructor(
     private formBuilder: FormBuilder,
     private formularioService: FormService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private translocoService: TranslocoService
   ) {}
 
   ngOnInit(): void {}
@@ -38,15 +42,41 @@ export class FormsComponent implements OnInit {
           this._snackBar.open('Email enviado com sucesso!', 'Fechar', {
             duration: 3000,
             panelClass: ['blue-snackbar']
-          })
+          });
         },
         error: (err) => {
-          this._snackBar.open('Erro ao enviar o email, por favor reenvie daqui alguns minutos', 'Fechar', {
-            panelClass: ['blue-snackbar']
-
-          })
+          this._snackBar.open(
+            'Erro ao enviar o email, por favor reenvie daqui alguns minutos',
+            'Fechar',
+            {
+              panelClass: ['blue-snackbar']
+            }
+          );
         },
       });
     }
+  }
+
+  validarTelefone(control: any): { [key: string]: any } | null {
+    const telefone = control.value.replace(/\D/g, '');
+    const telefoneValido = /^\d{10,11}$/.test(telefone);
+    return telefoneValido ? null : { 'telefoneInvalido': true };
+  }
+
+  formatarTelefone(event: any): void {
+    let value = event.target.value.replace(/\D/g, '');
+    let formattedValue = '';
+
+    if (value.length === 11) {
+      formattedValue = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
+    } else if (value.length === 10) {
+      formattedValue = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6, 10)}`;
+    } else {
+      formattedValue = value;
+    }
+
+    this.contatoForm.patchValue({
+      telefone: formattedValue
+    });
   }
 }
