@@ -14,8 +14,10 @@ variable "alternative_name" {
 
 variable "EMAIL" {
   type = string
+  sensitive = true
 }
 
 variable "PASSWORD" {
   type = string
+  sensitive = true
 }
