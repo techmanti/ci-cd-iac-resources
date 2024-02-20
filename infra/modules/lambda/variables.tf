@@ -1,0 +1,2 @@
+variable "PASSWORD" {}
+variable "EMAIL" {}

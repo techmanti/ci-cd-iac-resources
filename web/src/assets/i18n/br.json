@@ -1,76 +1,88 @@
 {
-  "about_title":"Sobre a",
-  "about_content1":"A missão da empresa e marca é propagar a cultura de Devops, Desenvolver um ambiente digital centrado na segurança e na inovação seguindo as melhores práticas conhecidas pelo mercado, realizando testes e evitar atrasos e falhas desnecessários.",
-  "about_content2":"Os valores da Techman, são os de trazer ao máximo, dentro da cultura de Devops, o equilibrio entre vida pessoal e profissional, capacitação e justiça social, com o máximo de segurança e proteção que a arquitetura em nuvem.",
-  "about_content3":"A visão da Techman procura proporcionar a melhoria da comunicação entre as partes interessadas de um projeto e colaborar com equipes multifuncionais para um deploy mais eficiente. Focados no cliente, está comprometido em entender as necessidades e objetivos dos mesmos, podendo aumentar a produtividade e fornecer soluções personalizadas voltadas para o DevExperience.",
-  "home_title":"Benefícios na Prática",
-  "description_title1":"Reduza",
-  "description_text1":"Erros e custos no desenvolvimento de seus projetos de software, infraestrutura de TI e muito mais.",
-  "description_title2":"Aumente",
-  "description_text2":"A produtividade da sua empresa, garantindo qualidade e velocidade na entrega de seus projetos.",
-  "description_title3":"Ganhe",
-  "description_text3":"Produtividade e Rentabilidade com a implementação de práticas ágeis do DevOps.",
-  "home_button":"Quero uma avaliação grátis!",
-  "info_banner_title":"Agilidade,",
-  "info_banner_title2":"Segurança e Qualidade",
-  "info_banner_subtitle":"Com DevOps suas equipes trabalham integradas no mesmo projeto, garantindo agilidade, segurança e qualidade.",
-  "title_container1":"Monitoramento de Aplicações",
-  "title_container1_description1":"SLAs (Acordos de Serviço)",
-  "title_container1_description2":"SLIs (Indicadores do Nível de Serviço)",
-  "title_container1_description3":"SLO (Objetivos de Nível de Serviço)",
-  "title_container2":"Implementação de Mudanças",
-  "title_container2_description1":"Redução de Riscos",
-  "title_container2_description2":"Ciclos de Feedbacks",
-  "title_container2_description3":"Performance, velocidade e Eficiência",
-  "title_container3":"Gerenciamento Techman",
-  "title_container3_description1":"Automação, traços e logs",
-  "title_container3_description2":"Indicadores de nível de serviço",
-  "title_container3_description3":"Decisões arquitetônicas e métricas",
-  "info_button":"Quero saber mais!",
-  "info_resources_title_text":"Os Melhores",
-  "info_resources_title_subtext":"Recursos Tecnológicos",
-  "service_content_title":"Como a Techman utiliza o DevOps para reduzir custos e aumentar a receita da sua empresa.",
-  "service_title_1":"Operações",
-  "service_title_2":"Otimização de Custos",
-  "service_title_3":"Automação",
-  "service_title_4":"Desempenho",
-  "service_title_5":"Segurança",
-  "service_title_6":"Sustentabilidade",
-  "home_layout":"Home",
-  "services_layout":"Serviços",
-  "resources_layout":"Recursos",
-  "aboutus_layout":"Sobre nós",
-  "contact_layout":"Contato",
-  "services":{
-     "1":{
-        "title":"Operações",
-        "subtitle":"Estratégias assertivas que entregam resultados mais rápidos para a sua empresa.",
-        "text":"A Techman monitora todas as etapas e métricas do processo Dev, Sec e Ops, prevendo falhas operacionais e realizando alterações frequentes de código conforme necessário pela empresa."
-     },
-     "2":{
-        "title":"Otimização de Custos",
-        "subtitle":"Maximize investimento em tecnologia e reduza os custos de desenvolvimento e entrega de software.",
-        "text":"Automatização, uso da nuvem, monitoramento e análise de custos, escalabilidade, integração e colaboração são práticas que permitem que a sua empresa maximize o valor do investimento em tecnologia e entregue software de alta qualidade a um custo reduzido."
-     },
-     "3":{
-        "title":"Automação",
-        "subtitle":"Eliminação de tarefas repetitivas dos processos tradicionais. Precisa de uma frase aqui também.",
-        "text":"Com a implementação do modelo Pipeline CI/CD, sua empresa tem análise constante de testes necessários e recuperação mais ágil de falhas."
-     },
-     "4":{
-        "title":"Desempenho",
-        "subtitle":"Aumento da taxa de sucesso através de métricas de qualidade e eficiência na entrega do software.",
-        "text":"Ao medir e monitorar regularmente essas métricas, as equipes de DevOps podem identificar áreas de melhoria e tomar medidas para melhorar o desempenho e a eficiência no desenvolvimento e entrega de software, utilizando a Arquitetura Serverless."
-     },
-     "5":{
-        "title":"Segurança",
-        "subtitle":"Implementação de toda a segurança necessária para a proteção de dados na nuvem.",
-        "text":"Através do DevOps, a Techman automatiza as práticas de segurança, através da proteção de dados na nuvem. Dessa forma, é possível prever e evitar a ocorrência de acidentes, identificar vulnerabilidades e monitorar e proteger dados sensíveis."
-     },
-     "6":{
-        "title":"Sustentabilidade",
-        "subtitle":"O impacto ambiental, social e econômico de todo o ciclo de vida do software é respeitado.",
-        "text":"Com o DevOps, sua empresa pode contribuir para a construção de um mundo mais sustentável e responsável, através da redução no consumo de energia e redução de ruídos, além de obter benefícios em termos de eficiência, custo e reputação."
-     }
-  }
+   "about_title":"Sobre a",
+   "about_content1":"A missão da empresa e marca é propagar a cultura de Devops, Desenvolver um ambiente digital centrado na segurança e na inovação seguindo as melhores práticas conhecidas pelo mercado, realizando testes e evitar atrasos e falhas desnecessários.",
+   "about_content2":"Os valores da Techman, são os de trazer ao máximo, dentro da cultura de Devops, o equilibrio entre vida pessoal e profissional, capacitação e justiça social, com o máximo de segurança e proteção que a arquitetura em nuvem.",
+   "about_content3":"A visão da Techman procura proporcionar a melhoria da comunicação entre as partes interessadas de um projeto e colaborar com equipes multifuncionais para um deploy mais eficiente. Focados no cliente, está comprometido em entender as necessidades e objetivos dos mesmos, podendo aumentar a produtividade e fornecer soluções personalizadas voltadas para o DevExperience.",
+   "home_title":"Benefícios na Prática",
+   "description_title1":"Reduza",
+   "description_text1":"Erros e custos no desenvolvimento de seus projetos de software, infraestrutura de TI e muito mais.",
+   "description_title2":"Aumente",
+   "description_text2":"A produtividade da sua empresa, garantindo qualidade e velocidade na entrega de seus projetos.",
+   "description_title3":"Ganhe",
+   "description_text3":"Produtividade e Rentabilidade com a implementação de práticas ágeis do DevOps.",
+   "home_button":"Quero uma avaliação grátis!",
+   "info_banner_title":"Agilidade,",
+   "info_banner_title2":"Segurança e Qualidade",
+   "info_banner_subtitle":"Com DevOps suas equipes trabalham integradas no mesmo projeto, garantindo agilidade, segurança e qualidade.",
+   "title_container1":"Monitoramento de Aplicações",
+   "title_container1_description1":"SLAs (Acordos de Serviço)",
+   "title_container1_description2":"SLIs (Indicadores do Nível de Serviço)",
+   "title_container1_description3":"SLO (Objetivos de Nível de Serviço)",
+   "title_container2":"Implementação de Mudanças",
+   "title_container2_description1":"Redução de Riscos",
+   "title_container2_description2":"Ciclos de Feedbacks",
+   "title_container2_description3":"Performance, velocidade e Eficiência",
+   "title_container3":"Gerenciamento Techman",
+   "title_container3_description1":"Automação, traços e logs",
+   "title_container3_description2":"Indicadores de nível de serviço",
+   "title_container3_description3":"Decisões arquitetônicas e métricas",
+   "info_button":"Quero saber mais!",
+   "info_resources_title_text":"Os Melhores",
+   "info_resources_title_subtext":"Recursos Tecnológicos",
+   "service_content_title":"Como a Techman utiliza o DevOps para reduzir custos e aumentar a receita da sua empresa.",
+   "service_title_1":"Operações",
+   "service_title_2":"Otimização de Custos",
+   "service_title_3":"Automação",
+   "service_title_4":"Desempenho",
+   "service_title_5":"Segurança",
+   "service_title_6":"Sustentabilidade",
+   "home_layout":"Home",
+   "services_layout":"Serviços",
+   "resources_layout":"Recursos",
+   "aboutus_layout":"Sobre nós",
+   "contact_layout":"Contato",
+   "services":{
+      "1":{
+         "title":"Operações",
+         "subtitle":"Estratégias assertivas que entregam resultados mais rápidos para a sua empresa.",
+         "text":"A Techman monitora todas as etapas e métricas do processo Dev, Sec e Ops, prevendo falhas operacionais e realizando alterações frequentes de código conforme necessário pela empresa."
+      },
+      "2":{
+         "title":"Otimização de Custos",
+         "subtitle":"Maximize investimento em tecnologia e reduza os custos de desenvolvimento e entrega de software.",
+         "text":"Automatização, uso da nuvem, monitoramento e análise de custos, escalabilidade, integração e colaboração são práticas que permitem que a sua empresa maximize o valor do investimento em tecnologia e entregue software de alta qualidade a um custo reduzido."
+      },
+      "3":{
+         "title":"Automação",
+         "subtitle":"Eliminação de tarefas repetitivas dos processos tradicionais. Precisa de uma frase aqui também.",
+         "text":"Com a implementação do modelo Pipeline CI/CD, sua empresa tem análise constante de testes necessários e recuperação mais ágil de falhas."
+      },
+      "4":{
+         "title":"Desempenho",
+         "subtitle":"Aumento da taxa de sucesso através de métricas de qualidade e eficiência na entrega do software.",
+         "text":"Ao medir e monitorar regularmente essas métricas, as equipes de DevOps podem identificar áreas de melhoria e tomar medidas para melhorar o desempenho e a eficiência no desenvolvimento e entrega de software, utilizando a Arquitetura Serverless."
+      },
+      "5":{
+         "title":"Segurança",
+         "subtitle":"Implementação de toda a segurança necessária para a proteção de dados na nuvem.",
+         "text":"Através do DevOps, a Techman automatiza as práticas de segurança, através da proteção de dados na nuvem. Dessa forma, é possível prever e evitar a ocorrência de acidentes, identificar vulnerabilidades e monitorar e proteger dados sensíveis."
+      },
+      "6":{
+         "title":"Sustentabilidade",
+         "subtitle":"O impacto ambiental, social e econômico de todo o ciclo de vida do software é respeitado.",
+         "text":"Com o DevOps, sua empresa pode contribuir para a construção de um mundo mais sustentável e responsável, através da redução no consumo de energia e redução de ruídos, além de obter benefícios em termos de eficiência, custo e reputação."
+      }
+   },
+   "forms_tittle":"Deixe seus dados e logo entraremos em contato!",
+   "forms_name":"Nome",
+   "forms_nameplaceholder":"Digite o nome",
+   "forms_name1":"Nome é obrigatório",
+   "forms_emailplaceholder":"Digite o email",
+   "forms_emailinvalid":"Digite o email",
+   "forms_name_company":"Nome da Empresa",
+   "forms_companyplaceholder":"Digite o nome da empresa",
+   "telefone_tittle":"Telefone",
+   "telefone_placeholder":"Digite o telefone",
+   "telefone_info":"O telefone deve ter 10 ou 11 dígitos numéricos",
+   "telefone_button":"Entrar em contato!"
 }

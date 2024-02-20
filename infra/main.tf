@@ -31,3 +31,9 @@ module "cloudfront" {
   record_name      = var.record_name
   certificate_arn  = module.acm.certificate_arn
 }
+
+module "lambda" {
+  source   = "./modules/lambda"
+  EMAIL    = var.EMAIL
+  PASSWORD = var.PASSWORD
+  }

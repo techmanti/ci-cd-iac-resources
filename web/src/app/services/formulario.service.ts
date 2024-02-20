@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FormService {
-  private apiUrl = 'http://localhost:3000/enviar-email'; // Substitua com a URL da sua API de envio de e-mails
+  private apiUrl = '${PRIVATE_API_URL}';
 
   constructor(private http: HttpClient) { }
 

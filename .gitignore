@@ -2,3 +2,6 @@ infra/.terraform/
 .terraform.lock.hcl
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
+*node_modules
+infra/files
+*.env
