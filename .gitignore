@@ -5,3 +5,4 @@ infra/terraform.tfstate.backup
 *node_modules
 infra/files
 *.env
+web/src/app/services/environment.ts

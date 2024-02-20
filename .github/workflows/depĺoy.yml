@@ -22,10 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Substitute API URL
-        run: sed -i "s|\${PRIVATE_API_URL}|${PRIVATE_API_URL}|g" web/src/app/services/formulario.service.ts
-      
-
       - name: Build Angular app
         run: npm run build   
 
