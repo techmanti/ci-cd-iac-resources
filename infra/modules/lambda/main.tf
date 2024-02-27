@@ -8,7 +8,7 @@ resource "aws_lambda_function" "email_api" {
   function_name = "email_api"
   handler       = "index.handler"
   role          = aws_iam_role.email_api_lambda.arn
-  runtime       = "nodejs14.x"
+  runtime       = "nodejs18.x"
 
   filename         = data.archive_file.email_api_artefact.output_path
   source_code_hash = data.archive_file.email_api_artefact.output_base64sha256
@@ -39,13 +39,6 @@ resource "aws_lambda_function_url" "email_api_url_live" {
     expose_headers    = ["*"]
     max_age           = 86400
   }
-}
-
-resource "aws_lambda_permission" "invoke_permission" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.email_api.arn
-  principal     = "*"
 }
 
 #IAM POLICY
